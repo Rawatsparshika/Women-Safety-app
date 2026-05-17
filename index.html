@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Safety App</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Women Safety App</h1>
+        <!-- SOS Button -->
+        <button id="sos-btn" onclick="activateSOS()">
+            SOS EMERGENCY
+       <button class="whatsapp-btn" onclick="sendWhatsAppAlert()">
+    <i class="fa-brands fa-whatsapp"></i>
+    Send SOS on WhatsApp
+</button>
+
+        <!-- Voice Button -->
+        <button id="voice-btn" onclick="startVoiceRecognition()">
+            🎤 Start Voice Command
+        </button>
+           </button>
+
+        <!-- Location -->
+        <div class="location-box">
+            <h2>Current Location</h2>
+            <p id="location">Location not detected</p>
+            <iframe
+    id="map"
+    width="100%"
+    height="250"
+    style="border:0; margin-top:15px;"
+    loading="lazy"
+    allowfullscreen>
+</iframe>
+
+<div class="nearby-buttons">
+
+    <button onclick="findNearby('hospital')">
+        🚑 Nearby Hospitals
+    </button>
+
+    <button onclick="findNearby('police')">
+        🚓 Nearby Police
+    </button>
+
+</div>
+
+
+<div id="nearby-results"></div>
+
+
+        </div>
+
+        <!-- Help Centers -->
+        <div class="help-centers">
+
+            <div class="card">
+                <h3>🚓 Police</h3>
+                <p>100</p>
+            </div>
+
+            <div class="card">
+                <h3>👩 Women Helpline</h3>
+                <p>1091</p>
+            </div>
+                <div class="card">
+                <h3>🚑 Ambulance</h3>
+                <p>108</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
